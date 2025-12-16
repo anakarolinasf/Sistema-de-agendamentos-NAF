@@ -1,0 +1,1 @@
+Para transformar um usuário em administrador, é necessário alterar o valor do campo role no banco de dados de "user" para "admin".

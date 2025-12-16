@@ -1,0 +1,1664 @@
+/* AdminPanel.module.css*/
+.container {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  min-height: 100vh;
+  background: #00529B;
+  padding: 20px;
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  padding: 24px 32px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleSection h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  color: #718096;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f7fafc;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.userAvatar {
+  width: 40px;
+  height: 40px;
+  background:#00529B;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.userEmail {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.875rem;
+}
+
+.userRole {
+  color: #00529B;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.statHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.statTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+}
+
+.statDescription {
+  font-size: 0.875rem;
+  color: #718096;
+  margin: 8px 0 0 0;
+}
+
+.appointmentsSection {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+}
+
+.searchInput {
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 14px;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #00529B;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.filterSelect {
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: #00529B
+;
+}
+
+.appointmentsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeader {
+  background: #f7fafc;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.tableHeader th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tableRow {
+  border-bottom: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.tableRow:hover {
+  background: #f7fafc;
+  transform: translateX(4px);
+}
+
+.tableRow td {
+  padding: 20px 16px;
+  color: #2d3748;
+}
+
+.userCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.userInitial {
+  width: 36px;
+  height: 36px;
+  background: #00529B
+;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.userEmail {
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.dateCell {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.timeCell {
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+.serviceCell {
+  background: #edf2f7;
+  color: #4a5568;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.actionsCell {
+  display: flex;
+  gap: 8px;
+}
+
+.actionButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.viewButton {
+  background: #e6fffa;
+  color: #234e52;
+  border: 1px solid #81e6d9;
+}
+
+.viewButton:hover {
+  background: #b2f5ea;
+}
+
+.deleteButton {
+  background: #fed7d7;
+  color: #c53030;
+  border: 1px solid #feb2b2;
+}
+
+.deleteButton:hover {
+  background: #feb2b2;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  color: #a0aec0;
+}
+
+.emptyIcon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.emptyState h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: #718096;
+}
+
+.emptyState p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #718096;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e2e8f0;
+  border-top: 4px solid #00529B
+;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.accessDenied {
+  text-align: center;
+  padding: 80px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.accessDeniedIcon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: #e53e3e;
+}
+
+.accessDenied h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 12px 0;
+}
+
+.accessDenied p {
+  color: #718096;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+  
+  .headerContent {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sectionHeader {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  
+  .controls {
+    width: 100%;
+  }
+  
+  .searchInput {
+    width: 100%;
+  }
+  
+  .appointmentsTable {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .tableHeader th,
+  .tableRow td {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .header,
+  .appointmentsSection {
+    padding: 24px 20px;
+  }
+  
+  .titleSection h1 {
+    font-size: 1.5rem;
+  }
+  
+  .statValue {
+    font-size: 1.5rem;
+  }
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalSlideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.modalHeader h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #718096;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+  background: #f7fafc;
+  color: #2d3748;
+}
+
+.modalContent {
+  padding: 24px;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #f7fafc;
+}
+
+.detailRow:last-child {
+  border-bottom: none;
+}
+
+.detailRow strong {
+  color: #4a5568;
+  font-weight: 600;
+}
+
+.detailRow span {
+  color: #2d3748;
+  text-align: right;
+}
+
+.serviceBadge {
+  background: #00529B
+;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.idText {
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 0.75rem;
+  color: #718096;
+  word-break: break-all;
+}
+
+.modalActions {
+  padding: 24px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.closeModalButton {
+  padding: 12px 24px;
+  background: #e2e8f0;
+  color: #4a5568;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.closeModalButton:hover {
+  background: #cbd5e0;
+}
+
+.modal .deleteButton {
+  padding: 12px 24px;
+  background: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.modal .deleteButton:hover {
+  background: #c53030;
+}
+
+.editButton {
+  background: #edf2f7;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.editButton:hover {
+  background: #00529B
+;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+/* Modal de Edição - Estilos adicionais */
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modalInputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modalLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.modalInput,
+.modalSelect {
+  padding: 14px 16px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.modalInput:focus,
+.modalSelect:focus {
+  outline: none;
+  border-color: #00529B
+;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.saveButton {
+  padding: 12px 24px;
+  background: #00529B
+;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.saveButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.saveButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cancelButton {
+  padding: 12px 24px;
+  background: #e2e8f0;
+  color: #4a5568;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cancelButton:hover {
+  background: #cbd5e0;
+}
+
+.actionsCell {
+  display: flex;
+  gap: 6px;
+}
+
+.actionButton {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.viewButton {
+  background: #e6fffa;
+  color: #234e52;
+  border: 1px solid #81e6d9;
+}
+
+.viewButton:hover {
+  background: #b2f5ea;
+}
+
+.editButton {
+  background: #edf2f7;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+}
+
+.editButton:hover {
+  background: #667eea;
+  color: white;
+}
+
+.deleteButton {
+  background: #fed7d7;
+  color: #c53030;
+  border: 1px solid #feb2b2;
+}
+
+.deleteButton:hover {
+  background: #feb2b2;
+}
+
+.modalForm .modalInputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modalForm .modalLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.modalForm .modalInput,
+.modalForm .modalSelect {
+  padding: 14px 16px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.modalForm .modalInput:focus,
+.modalForm .modalSelect:focus {
+  outline: none;
+  border-color: #00529B
+;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Ajuste responsivo para os botões de ação na tabela */
+@media (max-width: 768px) {
+  .actionsCell {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .actionButton {
+    padding: 8px 12px;
+    font-size: 0.65rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .actionsCell {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .actionButton {
+    flex: 1;
+    min-width: 60px;
+  }
+}
+
+/* Botão de criar agendamento */
+.createButton {
+  background: #00529B
+;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.createButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(159, 122, 234, 0.3);
+}
+
+.createButton:active {
+  transform: translateY(0);
+}
+
+/* Ajuste responsivo para o grid de stats */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+/* Para telas maiores, mostrar 4 colunas */
+@media (min-width: 1200px) {
+  .statsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Estilos para os horários disponíveis no AdminPanel */
+.loadingText {
+  font-size: 0.75rem;
+  color: #00529B
+;
+  font-weight: normal;
+  margin-left: 8px;
+}
+
+.warningText {
+  font-size: 0.75rem;
+  color: #e53e3e;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.scheduleInfo {
+  background: #f7fafc;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #00529B
+;
+  margin-top: 16px;
+  grid-column: 1 / -1;
+}
+
+.infoItem {
+  font-size: 0.875rem;
+  color: #4a5568;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.infoItem:last-child {
+  margin-bottom: 0;
+}
+
+.infoItem strong {
+  color: #2d3748;
+  min-width: 200px;
+}
+
+/* Melhorias para o select de horários */
+.modalInput:disabled {
+  background-color: #f7fafc;
+  color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.modalInput:disabled option {
+  color: #2d3748;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .scheduleInfo {
+    margin-top: 12px;
+    padding: 12px;
+  }
+  
+  .infoItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .infoItem strong {
+    min-width: auto;
+  }
+}
+
+/* Estados de loading para o botão */
+.saveButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.completeButton {
+  background: #c6f6d5;
+  color: #22543d;
+  border: 1px solid #9ae6b4;
+}
+
+.completeButton:hover {
+  background: #9ae6b4;
+  color: #1a4532;
+}
+
+/* Ajuste o container de ações para mais botões */
+.actionsCell {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.actionButton {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  flex: 1;
+  min-width: 70px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .actionsCell {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .actionButton {
+    padding: 8px 12px;
+    font-size: 0.65rem;
+    text-align: center;
+  }
+}
+
+/* ... estilos existentes ... */
+
+/* BOTÃO PRINCIPAL DE EXPORTAÇÃO */
+.exportMainButton {
+  background: linear-gradient(135deg, #00529B
+ 0%, #3182ce 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.exportMainButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(66, 153, 225, 0.3);
+  background: linear-gradient(135deg, #00529B
+ 0%, #2c5aa0 100%);
+}
+
+.exportMainButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* OPÇÕES DE EXPORTAÇÃO NO MODAL */
+.exportOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.exportOption {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.exportOption:hover {
+  border-color: #4299e1;
+  background: #f7fafc;
+}
+
+.exportOption input[type="radio"] {
+  margin-right: 12px;
+  transform: scale(1.2);
+}
+
+.optionContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.optionIcon {
+  font-size: 24px;
+  width: 40px;
+  text-align: center;
+}
+
+.optionContent div {
+  flex: 1;
+}
+
+.optionContent strong {
+  display: block;
+  color: #2d3748;
+  margin-bottom: 4px;
+}
+
+.optionContent p {
+  margin: 0;
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+.exportOption input[type="radio"]:checked + .optionContent {
+  color: #4299e1;
+}
+
+.exportOption input[type="radio"]:checked ~ .optionContent {
+  color: inherit;
+}
+
+/* INFORMAÇÕES DE EXPORTAÇÃO */
+.exportInfo {
+  background: #f7fafc;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #00529B;
+  margin: 20px 0;
+}
+
+.exportInfo p {
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.exportInfo ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #4a5568;
+}
+
+.exportInfo li {
+  margin-bottom: 4px;
+  font-size: 0.875rem;
+}
+
+/* BOTÃO DE CONFIRMAÇÃO DE EXPORTAÇÃO */
+.exportConfirmButton {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.exportConfirmButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(72, 187, 120, 0.3);
+  background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+}
+
+.exportConfirmButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .exportOptions {
+    gap: 8px;
+  }
+  
+  .exportOption {
+    padding: 12px;
+  }
+  
+  .optionContent {
+    gap: 8px;
+  }
+  
+  .optionIcon {
+    font-size: 20px;
+    width: 30px;
+  }
+}
+
+/* AÇÕES DE EXPORTAÇÃO */
+.exportActions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.previewButton {
+  background: #00529B;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.previewButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.3);
+}
+
+.downloadButton {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.downloadButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+}
+
+.previewButton:disabled,
+.downloadButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .exportActions {
+    grid-template-columns: 1fr;
+  }
+}
+
+.userName {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.9rem;
+}
+
+.userEmail {
+  color: #718096;
+  font-size: 0.8rem;
+}
+
+.userRole {
+  color: #00529B
+;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* AdminPanel.module.css - NOVAS FUNCIONALIDADES */
+
+/* Botão de Gerenciar Serviços */
+.manageServicesButton {
+  background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.manageServicesButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(237, 137, 54, 0.3);
+}
+/* AdminPanel.module.css - CORREÇÕES DO MODAL DE SERVIÇOS */
+
+/* Modal de Gerenciar Serviços - Layout Corrigido */
+.serviceForm {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  border: 1px solid #e2e8f0;
+}
+
+.serviceForm h4 {
+  margin: 0 0 16px 0;
+  color: #2d3748;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  align-items: end;
+}
+
+.formRow input {
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  min-width: 0; /* Permite que o input encolha */
+}
+
+.formRow input:focus {
+  outline: none;
+  border-color: #00529B
+;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.iconSelect {
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 80px; /* Largura mínima reduzida */
+  transition: all 0.3s ease;
+  height: 46px; /* Altura consistente com os inputs */
+}
+
+.iconSelect:focus {
+  outline: none;
+  border-color: #00529B
+;
+}
+
+.addButton {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  height: 46px; /* Altura consistente */
+  min-width: 100px; /* Largura mínima fixa */
+}
+
+.addButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+}
+
+/* Lista de Serviços - Layout Melhorado */
+.servicesList {
+  margin-top: 24px;
+}
+
+.servicesList h4 {
+  margin: 0 0 16px 0;
+  color: #2d3748;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.noServices {
+  text-align: center;
+  padding: 40px 20px;
+  color: #a0aec0;
+  font-style: italic;
+  background: #f7fafc;
+  border-radius: 8px;
+  border: 1px dashed #cbd5e0;
+}
+
+.serviceItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: white;
+  transition: all 0.3s ease;
+  gap: 16px;
+}
+
+.serviceItem:hover {
+  border-color: #00529B
+;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.serviceInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  color: #2d3748;
+  flex: 1;
+  min-width: 0; /* Permite que o texto quebre */
+}
+
+.serviceIcon {
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.serviceName {
+  flex: 1;
+  min-width: 0;
+  word-break: break-word;
+}
+
+.serviceActions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0; /* Não encolhe os botões */
+}
+
+/* Botões de Ação para Serviços - Tamanhos Corrigidos */
+.serviceActions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px; /* Largura mínima para os botões */
+  height: 36px; /* Altura consistente */
+}
+
+.serviceActions .editButton {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.serviceActions .editButton:hover {
+  background: #00529B
+;
+  color: white;
+}
+
+.serviceActions .deleteButton {
+  background: #fed7d7;
+  color: #c53030;
+}
+
+.serviceActions .deleteButton:hover {
+  background: #feb2b2;
+}
+
+/* Formulário de Edição de Serviço - Layout Corrigido */
+.editForm {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.editForm input {
+  padding: 8px 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 0;
+}
+
+.editForm input:focus {
+  outline: none;
+  border-color: #00529B
+;
+}
+
+.editForm .iconSelect {
+  padding: 8px;
+  height: 38px;
+  min-width: 70px;
+}
+
+.editForm .saveButton,
+.editForm .cancelButton {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  height: 38px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editForm .saveButton {
+  background: #48bb78;
+  color: white;
+}
+
+.editForm .saveButton:hover {
+  background: #38a169;
+}
+
+.editForm .cancelButton {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.editForm .cancelButton:hover {
+  background: #cbd5e0;
+}
+
+/* Ajustes Responsivos para o Modal de Serviços */
+@media (max-width: 768px) {
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .formRow input,
+  .iconSelect,
+  .addButton {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .serviceItem {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  
+  .serviceInfo {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .serviceActions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .editForm {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .editForm input,
+  .editForm .iconSelect,
+  .editForm .saveButton,
+  .editForm .cancelButton {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .serviceForm {
+    padding: 16px;
+  }
+  
+  .serviceItem {
+    padding: 12px;
+  }
+  
+  .serviceActions {
+    flex-direction: row;
+    gap: 8px;
+  }
+  
+  .serviceActions button {
+    flex: 1;
+    min-width: auto;
+  }
+  
+  .modalContent {
+    padding: 16px;
+  }
+}
+
+/* Estados de Loading para Serviços */
+.serviceForm:disabled,
+.serviceForm input:disabled,
+.serviceForm select:disabled,
+.serviceForm button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Animações para transições suaves */
+.serviceItem {
+  animation: slideInUp 0.3s ease;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Feedback visual para ações */
+.serviceItem.deleting {
+  opacity: 0.6;
+  background: #fed7d7;
+  transition: all 0.3s ease;
+}
+
+.serviceItem.updating {
+  background: #e6fffa;
+  transition: all 0.3s ease;
+}
+
+/* Melhorias para acessibilidade */
+.serviceForm input:focus,
+.iconSelect:focus,
+.addButton:focus,
+.serviceActions button:focus {
+  outline: 2px solid #00529B
+;
+  outline-offset: 2px;
+}
+
+/* Estados de hover melhorados */
+.serviceItem:hover .serviceActions button {
+  transform: scale(1.05);
+}
+
+.serviceItem:hover .serviceActions button:active {
+  transform: scale(0.95);
+}
+
+/* Scroll personalizado para a lista de serviços */
+.servicesList {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 4px; /* Espaço para o scrollbar */
+}
+
+.servicesList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.servicesList::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.servicesList::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 3px;
+}
+
+.servicesList::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Garantir que o modal tenha padding adequado */
+.modalContent {
+  padding: 24px;
+}
+
+/* Ajustes específicos para o modal de serviços */
+.modal.servicesModal {
+  max-width: 600px; /* Largura maior para acomodar melhor o conteúdo */
+}
+
+/* Espaçamento entre seções no modal */
+.serviceForm + .servicesList {
+  margin-top: 0;
+}
+
+/* Ajuste para o título do modal */
+.modalHeader h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+}
